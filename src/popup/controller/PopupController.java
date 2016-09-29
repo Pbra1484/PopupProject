@@ -8,12 +8,20 @@ public class PopupController
 	
 	public PopupController()
 	{
-		
+		display = new PopipViewer();
 	}
 	
 	public void start()
 	{
+		int count = 0;
+		String answer = "Sample";
 		
+		while(answer != null && !answer.equals(""))
+		{
+			display.displayMessage("look at the words on the mnitor.");
+			
+			answer = display.collectResponse("Type your question here.");
+		}
 	}
 	/**
 	 * Checks a supplied string value to see if it can be converted to a double.
