@@ -1,17 +1,32 @@
 package popup.controller;
 
 import popups.view.PopupViewer;
+import popups.model.Thingy;
+import java.util.List;
+import java.util.ArrayList;
+
+
 
 public class PopupController
 {
 	private PopupViewer display;
+	private List<Thingy> thingyList;
+	
 	
 	public PopupController()
 	{
-		display = new PopipViewer();
+		display = new PopupViewer();
+		thingyList = new ArrayList<Thingy>();
+		
 	}
 	
 	public void start()
+	{
+		learnLists();
+		
+	}
+	
+	private void askQuestionsLoop()
 	{
 		String answer = "Sample";
 		
@@ -69,6 +84,16 @@ public class PopupController
 		return validInteger;
 	}
 	
+	private void learnLists()
+	{
+		display.displayMessage("This is the size of the list: " + thingyList.size());
+		Thingy firstThingy = new Thingy();
+		thingyList.add(firstThingy);
+		display.displayMessage("this is the size of the list: " + thingyList.size());
+		thingyList.add(firstThingy);
+		display.displayMessage("this is the size of the list: " + thingyList.size());
+		
+	}
 	
 	
 	
