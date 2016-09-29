@@ -13,14 +13,12 @@ public class PopupController
 	
 	public void start()
 	{
-		int count = 0;
 		String answer = "Sample";
 		
-		while(answer != null && !answer.equals(""))
+		while(answer != null && !isDouble(answer))
 		{
-			display.displayMessage("look at the words on the mnitor.");
 			
-			answer = display.collectResponse("Type your question here.");
+			answer = display.collectResponse("You need to type a double");
 		}
 	}
 	/**
