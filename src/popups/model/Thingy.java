@@ -4,7 +4,7 @@ public class Thingy
 {
 	private int numberThing;
 	private double valueThing;
-	private String wordThing;
+	private String words;
 	private boolean isValidThing;
 	
 	//Declarations-------------------
@@ -13,7 +13,7 @@ public class Thingy
 	{
 		this.numberThing = 6;
 		this.valueThing = 1234;
-		this.wordThing = "String here.";
+		this.words = "BAD";
 	}
 	
 	//Getters-------------------------
@@ -27,9 +27,9 @@ public class Thingy
 	{
 		return valueThing;
 	}
-	public String getWordthing()
+	public String getWords()
 	{
-		return wordThing;
+		return words;
 	}
 	public boolean getIsValidThing()
 	{
@@ -46,9 +46,9 @@ public class Thingy
 	{
 		this.valueThing = valueThing;
 	}
-	public void setWordThing(String wordThing)
+	public void setWords(String wordThing)
 	{
-		this.wordThing = wordThing;
+		this.words = wordThing;
 	}
 	public void setIsValueThing(boolean isValidThing)
 	{

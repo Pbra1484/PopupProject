@@ -93,6 +93,34 @@ public class PopupController
 		thingyList.add(firstThingy);
 		display.displayMessage("this is the size of the list: " + thingyList.size());
 		
+		for (int index = 0; index < 5; index++)
+		{
+			Thingy loopThingy = new Thingy();
+			thingyList.add(loopThingy);
+		}
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage("the thingy at this spot has: " + thingyList.get(index).getWords());
+			
+		}
+		Thingy specialThingy = new Thingy();
+		specialThingy.setWords("not null");
+		
+		thingyList.add(1, specialThingy);
+		
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage("the thingy at spot " + index +  " has: " + thingyList.get(index).getWords());
+			
+		}
+		
+		thingyList.get(3).setWords("I just changed what is inside");
+		Thingy tempThing = thingyList.get(4);
+		tempThing.setWords("alsochanged");
+		
+		
+		
+		
 	}
 	
 	
