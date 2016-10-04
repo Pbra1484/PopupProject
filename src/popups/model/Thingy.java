@@ -8,13 +8,13 @@ public class Thingy
 	private boolean isValidThing;
 	
 	//Declarations-------------------
-	
-	public Thingy()
-	{
-		this.numberThing = 6;
-		this.valueThing = 1234;
-		this.words = "BAD";
-	}
+//	
+//	public Thingy()
+//	{
+//		this.numberThing = 6;
+//		this.valueThing = 1234;
+//		this.words = "BAD";
+//	}
 	
 	//Getters-------------------------
 	

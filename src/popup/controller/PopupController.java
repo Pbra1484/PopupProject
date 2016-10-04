@@ -125,11 +125,41 @@ public class PopupController
 		Thingy replacement = new Thingy();
 		replacement.setWords("replaced");
 		
-		thingyList.set(0, replacement);
+		Thingy old = thingyList.set(0, replacement);
 		
 		for (int index = 0; index < thingyList.size(); index++)
 		{
 			display.displayMessage(thingyList.get(index).getWords());
+			
+		}
+		old.setWords("i was replaced");
+		display.displayMessage(old.getWords());
+		
+		thingyList.remove(4);
+		display.displayMessage("The sixe is not " + thingyList.size());
+		old = thingyList.remove(4);
+		display.displayMessage("Thsize is now " + thingyList.size());
+		display.displayMessage("This was removed: " + old.getWords());
+		thingyList.add(0, old);
+		
+		Thingy added = new Thingy();
+		String answer = display.collectResponse("What do you want to add");
+		added.setWords(answer);
+		thingyList.add(added);
+		
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage(thingyList.get(index).getWords());
+			
+		}
+		
+		for (Thingy currentThingy : thingyList)
+		{
+			display.displayMessage("The current value is " + currentThingy.getWords());
+		}
+		for (Thingy currentThingy : thingyList)
+		{
+			currentThingy.setWords(currentThingy.getWords() + " number");
 			
 		}
 		
