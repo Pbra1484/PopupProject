@@ -117,9 +117,21 @@ public class PopupController
 		thingyList.get(3).setWords("I just changed what is inside");
 		Thingy tempThing = thingyList.get(4);
 		tempThing.setWords("alsochanged");
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage(thingyList.get(index).getWords());
+		}
 		
+		Thingy replacement = new Thingy();
+		replacement.setWords("replaced");
 		
+		thingyList.set(0, replacement);
 		
+		for (int index = 0; index < thingyList.size(); index++)
+		{
+			display.displayMessage(thingyList.get(index).getWords());
+			
+		}
 		
 	}
 	
