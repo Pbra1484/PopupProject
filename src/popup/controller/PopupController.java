@@ -22,7 +22,7 @@ public class PopupController
 	
 	public void start()
 	{
-		learnLists();
+		
 		
 	}
 	
@@ -161,6 +161,44 @@ public class PopupController
 		{
 			currentThingy.setWords(currentThingy.getWords() + " number");
 			
+		}
+		
+		
+	}
+	
+	public void conditionals()
+	{
+		if(1 < 2)
+		{
+			if(2 < 3)
+			{
+				display.displayMessage("2");
+			}
+		}
+		if(1 == 1)
+		{
+			display.displayMessage("1");
+			
+		}
+		if(2 == 2)
+		{
+			display.displayMessage("2");
+		}
+		if(1 > 3)
+		{
+			display.displayMessage("Wrong");
+		}
+		else
+		{
+			display.displayMessage("True");
+			if(1 < 2)
+			{
+				display.displayMessage("True");
+			}
+			else
+			{
+				display.displayMessage("False");
+			}
 		}
 		
 	}
