@@ -22,7 +22,7 @@ public class PopupController
 	
 	public void start()
 	{
-		
+		substringTest();
 		
 	}
 	
@@ -200,6 +200,35 @@ public class PopupController
 				display.displayMessage("False");
 			}
 		}
+		
+	}
+
+	
+	private void indexOfTest()
+	{
+		String words = " ";
+		String sample = "";
+		int index = -99;
+		
+		index = words.indexOf(sample, 3);
+		
+		System.out.println("The index of sample words is: " + index);
+		
+		index = sample.indexOf("");
+		
+		System.out.println("The index of words in sample is: " + index);
+	}
+	
+	private void substringTest()
+	{
+		String test = "The quick brown fox ...";
+		String words = "... jumped over the la dog";
+		
+		String other = test.substring(4);
+		System.out.println("Here is the subtring: " + other);
+		
+		other = words.substring(2,5);
+		System.out.println("here is the partial substring: " + other);
 		
 	}
 	
